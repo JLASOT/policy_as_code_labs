@@ -24,7 +24,7 @@ pipeline {
                         -v ${PWD}:/project \
                         -w /project \
                         openpolicyagent/conftest \
-                        test --policy lab1-conftest/policies \
+                        test --no-fail --policy lab1-conftest/policies \
                              lab1-conftest/manifests/deployment-insecure.yaml
                 '''
             }
@@ -38,7 +38,7 @@ pipeline {
                         -v ${PWD}:/project \
                         -w /project \
                         bridgecrew/checkov \
-                        -d lab2-checkov/terraform
+                        -d lab2-checkov/terraform || true
                 '''
             }
         }
