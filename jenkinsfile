@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         GIT_URL = 'https://github.com/JLASOT/policy_as_code_labs.git'
-        GIT_CREDENTIALS = 'git-credentials-id' // <-- opcional si repo es privado
+        GIT_CREDENTIALS = 'git-credentials-id' 
     }
 
     stages {
